@@ -376,8 +376,8 @@ static void verify(const array<uint16_t,12>& adj,int n,const vector<int>& p,int 
 int main(int argc,char**argv){
     if(argc<4){cerr<<"usage: walk GRAPHDIR MIN_N MAX_N [MAX_GRAPHS_PER_N] [START_GRAPH_INDEX] [MAX_STATES_PER_GRAPH]\n";return 2;}
     string dir=argv[1];int minN=stoi(argv[2]),maxN=stoi(argv[3]);
-    size_t maxgraphs=argc>4 stoull(argv[4]):SIZE_MAX;
-    size_t offset=argc>5 stoull(argv[5]):0, cap=argc>6 stoull(argv[6]):SIZE_MAX;
+    size_t maxgraphs=argc>4?stoull(argv[4]):SIZE_MAX;
+    size_t offset=argc>5?stoull(argv[5]):0, cap=argc>6?stoull(argv[6]):SIZE_MAX;
     const int countref[]={0,1,1,2,6,10,29,64,194,531,1733,5524,19430};
     for(int n=minN;n<=maxN;n++){
         auto t0=chrono::steady_clock::now();
