@@ -1,0 +1,10 @@
+progress n=12 graph=100/19430 seen=100 skipped=0 T=77 M=16 states=3420463 elapsed_s=0.495608
+progress n=12 graph=200/19430 seen=200 skipped=0 T=77 M=16 states=7221842 elapsed_s=1.01607
+progress n=12 graph=300/19430 seen=300 skipped=0 T=77 M=16 states=11592550 elapsed_s=1.61555
+progress n=12 graph=400/19430 seen=400 skipped=0 T=77 M=16 states=16468852 elapsed_s=2.29634
+progress n=12 graph=500/19430 seen=500 skipped=0 T=77 M=16 states=20581643 elapsed_s=2.87792
+progress n=12 graph=600/19430 seen=600 skipped=0 T=77 M=16 states=24149607 elapsed_s=3.35387
+progress n=12 graph=700/19430 seen=700 skipped=0 T=77 M=16 states=28917648 elapsed_s=4.0449
+progress n=12 graph=800/19430 seen=800 skipped=0 T=77 M=16 states=34456064 elapsed_s=4.84866
+progress n=12 graph=900/19430 seen=900 skipped=0 T=77 M=16 states=39199010 elapsed_s=5.50855
+progress n=12 graph=1000/19430 seen=1000 skipped=0 T=77 M=16 states=45709495 elapsed_s=6.50308

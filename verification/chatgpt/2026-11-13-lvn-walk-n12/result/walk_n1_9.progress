@@ -1,0 +1,7 @@
+progress n=8 graph=100/194 T=34 M=8 states=108931 elapsed_s=0.0127705
+progress n=9 graph=100/531 T=43 M=10 states=271237 elapsed_s=0.0315166
+progress n=9 graph=200/531 T=45 M=14 states=523619 elapsed_s=0.0621891
+progress n=9 graph=300/531 T=45 M=14 states=782091 elapsed_s=0.0928278
+progress n=9 graph=400/531 T=45 M=14 states=1028205 elapsed_s=0.12174
+progress n=9 graph=500/531 T=45 M=14 states=1273530 elapsed_s=0.150421
+wall_seconds=0.18 peak_rss_kb=2176
