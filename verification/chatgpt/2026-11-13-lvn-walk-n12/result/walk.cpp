@@ -1,0 +1,147 @@
+// Exact least-visited-neighbour adversarial walk on each generated graph.
+// Unbounded by an a priori cap: counter bytes checked for overflow.
+// Every legal successor is visited, memoized by (position, entire counters).
+// A strictly positive counter-sum increase guarantees acyclic recursion.
+#include <bits/stdc++.h>
+using namespace std;
+using ull=uint64_t;
+static ull mix(ull v){v+=0x9e3779b97f4a7c15ULL;v=(v^(v>>30))*0xbf58476d1ce4e5b9ULL;v=(v^(v>>27))*0x94d049bb133111ebULL;return v^(v>>31);}
+struct Key {ull lo=0,hi=0;bool operator==(const Key&o)const{return lo==o.lo&&hi==o.hi;}};
+struct KeyHash{size_t operator()(const Key&k)const{return mix(k.lo^mix(k.hi));}};
+// hi[0..31] = counters of vertices 8..11; [32..39] = position;
+// hi[40..51] = positive counters mask (redundant, for speed).
+static int ct(Key k,int v){return v<8?(int)((k.lo>>(v*8))&255):(int)((k.hi>>((v-8)*8))&255);}
+static int pos(Key k){return (k.hi>>32)&255;}
+static int visited(Key k){return (k.hi>>40)&4095;}
+static Key step(Key k,int v){
+    int old=ct(k,v);
+    if(old==255){cerr<<"COUNTER OVERFLOW: cannot continue exact computation\n";exit(3);}
+    if(v<8) k.lo+=1ULL<<(v*8);
+    else k.hi+=1ULL<<((v-8)*8);
+    k.hi=(k.hi&~(255ULL<<32))|((ull)v<<32);
+    if(old==0)k.hi|=1ULL<<(40+v);
+    return k;
+}
+static Key initial(int start){Key k;k.hi=((ull)start<<32)|(1ULL<<(40+start));if(start<8)k.lo=1ULL<<(8*start);else k.hi|=1ULL<<((start-8)*8);return k;}
+struct Val{uint16_t t=0;uint8_t m=0,nextT=255,nextM=255;};
+struct Solver{
+    int n=0,all=0;array<uint16_t,12> adj{};
+    unordered_map<Key,Val,KeyHash> memo;
+    size_t states=0, stateLimit=SIZE_MAX;
+    Val solve(Key k){
+        if(visited(k)==all)return {};
+        auto it=memo.find(k);if(it!=memo.end())return it->second;
+        int v=pos(k),minc=999,cm=0;
+        for(int i=0;i<n;i++){
+            cm=max(cm,ct(k,i));
+            if(adj[v]>>i&1)minc=min(minc,ct(k,i));
+        }
+        Val r;r.m=cm;
+        for(int i=0;i<n;i++)if((adj[v]>>i&1)&&ct(k,i)==minc){
+            Val sub=solve(step(k,i));
+            if(1+sub.t>r.t){r.t=1+sub.t;r.nextT=i;}
+            if(sub.m>r.m){r.m=sub.m;r.nextM=i;}
+        }
+        if(memo.size()>=stateLimit)throw runtime_error("state limit exceeded");
+        memo.emplace(k,r);
+        return r;
+    }
+    vector<int> path(int start,bool forM){
+        Key k=initial(start);vector<int> p{start};
+        while(visited(k)!=all){
+            auto it=memo.find(k);
+            if(it==memo.end())throw runtime_error("missing memo in path reconstruction");
+            int v=forM?it->second.nextM:it->second.nextT;
+            if(v==255 && forM)v=it->second.nextT;
+            if(v==255)throw runtime_error("dead path");
+            k=step(k,v);p.push_back(v);
+        }
+        return p;
+    }
+};
+static void verify(const array<uint16_t,12>& adj,int n,const vector<int>& p,int expectedT,int expectedM){
+    array<int,12> c{};c[p.at(0)]=1;int coverstep=n==1?0:-1,max_before=0;
+    if(n>1)max_before=1;
+    for(int t=1;t<(int)p.size();t++){
+        int u=p[t-1],v=p[t],mini=999;
+        if(!(adj[u]>>v&1))throw runtime_error("non-edge in witness");
+        for(int i=0;i<n;i++)if(adj[u]>>i&1)mini=min(mini,c[i]);
+        if(c[v]!=mini)throw runtime_error("non-minimal step in witness");
+        c[v]++;
+        bool covered=true;for(int i=0;i<n;i++)if(!c[i])covered=false;
+        if(covered){coverstep=t;break;}
+        max_before=max(max_before,*max_element(c.begin(),c.begin()+n));
+    }
+    if(coverstep<0)throw runtime_error("witness did not cover");
+    if(expectedT>=0 && coverstep!=expectedT)throw runtime_error("T-witness wrong");
+    if(expectedM>=0 && max_before!=expectedM)throw runtime_error("M-witness wrong");
+}
+int main(int argc,char**argv){
+    if(argc<4){cerr<<"usage: walk GRAPHDIR MIN_N MAX_N [MAX_GRAPHS_PER_N] [START_GRAPH_INDEX] [MAX_STATES_PER_GRAPH]\n";return 2;}
+    string dir=argv[1];int minN=stoi(argv[2]),maxN=stoi(argv[3]);
+    size_t maxgraphs=argc>4?stoull(argv[4]):SIZE_MAX;
+    size_t offset=argc>5?stoull(argv[5]):0, cap=argc>6?stoull(argv[6]):SIZE_MAX;
+    const int countref[]={0,1,1,2,6,10,29,64,194,531,1733,5524,19430};
+    for(int n=minN;n<=maxN;n++){
+        auto t0=chrono::steady_clock::now();
+        ifstream f(dir+"/graphs_n"+to_string(n)+".txt");
+        if(!f){cerr<<"missing graphs file for n="<<n<<'\n';return 2;}
+        int count=0,seen=0,skipped=0,T=0,M=0,treeT=0,cubicT=0,ntrees=0,ncubics=0;
+        long long totalstates=0;
+        vector<int> witnessT,witnessM;
+        int graphT=-1,graphM=-1,startT=-1,startM=-1;
+        array<uint16_t,12> adj{};
+        while(true){
+            for(int i=0;i<n;i++)if(!(f>>adj[i]))goto endfile;
+            if((size_t)seen<offset){seen++;continue;}
+            if((size_t)count>=maxgraphs)break;
+            int edges=0;bool cubic=true;
+            for(int i=0;i<n;i++){int degree=__builtin_popcount((unsigned)adj[i]);edges+=degree;cubic &= degree==3;}
+            edges/=2;bool tree=edges==n-1;
+            Solver solver;solver.n=n;solver.all=(1<<n)-1;solver.adj=adj;solver.stateLimit=cap;
+            int localT=0,localM=0,localStartT=0,localStartM=0;
+            try { for(int start=0;start<n;start++){
+                Val v=(n==1)?Val{}:solver.solve(initial(start));
+                if(v.t>localT){localT=v.t;localStartT=start;}
+                if(v.m>localM){localM=v.m;localStartM=start;}
+            } } catch(const exception& e){
+                skipped++;cerr<<"SKIPPED n="<<n<<" index="<<seen<<" states="<<solver.memo.size()<<" reason="<<e.what()<<"\n";
+                seen++;continue;
+            }
+            ntrees+=tree;ncubics+=cubic;
+            if(localT>T){
+                T=localT;graphT=seen;startT=localStartT;
+                witnessT=n==1?vector<int>{0}:solver.path(startT,false);
+                verify(adj,n,witnessT,T,-1);
+            }
+            if(localM>M){
+                M=localM;graphM=seen;startM=localStartM;
+                witnessM=n==1?vector<int>{0}:solver.path(startM,true);
+                verify(adj,n,witnessM,-1,M);
+            }
+            if(tree)treeT=max(treeT,localT);
+            if(cubic)cubicT=max(cubicT,localT);
+            totalstates+=solver.memo.size();count++;seen++;
+            if(count%100==0){
+                auto secs=chrono::duration<double>(chrono::steady_clock::now()-t0).count();
+                cerr<<"progress n="<<n<<" graph="<<count<<"/"<<countref[n]
+                    <<" seen="<<seen<<" skipped="<<skipped<<" T="<<T<<" M="<<M<<" states="<<totalstates<<" elapsed_s="<<secs<<'\n';
+            }
+        }
+        endfile:
+        double secs=chrono::duration<double>(chrono::steady_clock::now()-t0).count();
+        cout<<"RESULT n="<<n<<" processed="<<count<<" seen="<<seen<<" skipped="<<skipped<<" expected="<<countref[n]<<" complete="<<(count==countref[n])
+            <<" T="<<T<<" M="<<M<<" treeT="<<treeT<<" cubicT="<<cubicT
+            <<" trees="<<ntrees<<" cubics="<<ncubics<<" states="<<totalstates
+            <<" seconds="<<fixed<<setprecision(3)<<secs<<'\n';
+        if(graphT>=0){
+            cout<<"WITNESS T n="<<n<<" graph_index="<<graphT<<" start="<<startT<<" path=";
+            for(int v:witnessT)cout<<v<<',';cout<<'\n';
+        }
+        if(graphM>=0){
+            cout<<"WITNESS M n="<<n<<" graph_index="<<graphM<<" start="<<startM<<" path=";
+            for(int v:witnessM)cout<<v<<',';cout<<'\n';
+        }
+        cout.flush();
+    }
+}

@@ -1,0 +1,31 @@
+RESULT n=1 processed=1 seen=1 skipped=0 expected=1 complete=1 T=0 M=0 treeT=0 cubicT=0 trees=1 cubics=0 states=0 seconds=0.000
+RESULT n=2 processed=1 seen=1 skipped=0 expected=1 complete=1 T=1 M=1 treeT=1 cubicT=0 trees=1 cubics=0 states=2 seconds=0.000
+WITNESS T n=2 graph_index=0 start=0 path=0,1,
+WITNESS M n=2 graph_index=0 start=0 path=0,1,
+RESULT n=3 processed=2 seen=2 skipped=0 expected=2 complete=1 T=3 M=2 treeT=3 cubicT=0 trees=1 cubics=0 states=18 seconds=0.000
+WITNESS T n=3 graph_index=0 start=0 path=0,1,0,2,
+WITNESS M n=3 graph_index=0 start=0 path=0,1,0,2,
+RESULT n=4 processed=6 seen=6 skipped=0 expected=6 complete=1 T=7 M=3 treeT=7 cubicT=3 trees=2 cubics=1 states=167 seconds=0.000
+WITNESS T n=4 graph_index=1 start=0 path=0,1,3,1,3,1,0,2,
+WITNESS M n=4 graph_index=0 start=0 path=0,1,0,2,0,3,
+RESULT n=5 processed=10 seen=10 skipped=0 expected=10 complete=1 T=11 M=5 treeT=11 cubicT=0 trees=2 cubics=0 states=722 seconds=0.000
+WITNESS T n=5 graph_index=0 start=0 path=0,2,0,1,4,1,4,1,4,1,0,3,
+WITNESS M n=5 graph_index=0 start=1 path=1,0,2,0,3,0,2,0,3,0,1,4,
+RESULT n=6 processed=29 seen=29 skipped=0 expected=29 complete=1 T=17 M=7 treeT=17 cubicT=8 trees=4 cubics=2 states=5514 seconds=0.001
+WITNESS T n=6 graph_index=0 start=0 path=0,2,0,1,4,1,5,1,4,1,5,1,4,1,5,1,0,3,
+WITNESS M n=6 graph_index=0 start=0 path=0,2,0,1,4,1,5,1,4,1,5,1,4,1,5,1,0,3,
+RESULT n=7 processed=64 seen=64 skipped=0 expected=64 complete=1 T=27 M=8 treeT=27 cubicT=0 trees=6 cubics=0 states=27977 seconds=0.003
+WITNESS T n=7 graph_index=0 start=1 path=1,4,1,0,2,6,2,0,3,0,3,0,3,0,2,6,2,6,2,6,2,6,2,6,2,0,1,5,
+WITNESS M n=7 graph_index=0 start=1 path=1,4,1,0,2,6,2,0,3,0,3,0,3,0,2,6,2,6,2,6,2,6,2,6,2,0,1,5,
+RESULT n=8 processed=194 seen=194 skipped=0 expected=194 complete=1 T=34 M=8 treeT=31 cubicT=15 trees=11 cubics=5 states=206959 seconds=0.025
+WITNESS T n=8 graph_index=11 start=1 path=1,4,1,0,2,6,7,2,0,3,0,3,0,3,0,2,6,7,6,7,2,6,7,2,6,7,2,6,7,6,7,2,0,1,5,
+WITNESS M n=8 graph_index=2 start=1 path=1,0,2,7,3,0,1,4,1,5,1,4,1,5,1,4,1,5,1,0,3,7,2,6,
+RESULT n=9 processed=531 seen=531 skipped=0 expected=531 complete=1 T=45 M=14 treeT=43 cubicT=0 trees=18 cubics=0 states=1350244 seconds=0.165
+WITNESS T n=9 graph_index=123 start=1 path=1,4,1,0,2,6,8,2,0,3,0,3,0,3,0,2,6,7,6,7,6,8,2,8,6,7,6,8,2,8,2,8,6,7,6,7,6,7,6,7,6,8,2,0,1,5,
+WITNESS M n=9 graph_index=123 start=1 path=1,4,1,0,2,6,8,2,0,3,0,3,0,3,0,1,5,1,4,1,5,1,4,1,5,1,4,1,5,1,4,1,5,1,4,1,5,1,0,2,8,6,7,
+RESULT n=10 processed=1733 seen=1733 skipped=0 expected=1733 complete=1 T=57 M=16 treeT=57 cubicT=26 trees=37 cubics=19 states=10992758 seconds=1.324
+WITNESS T n=10 graph_index=776 start=1 path=1,4,1,0,2,6,7,8,7,9,7,8,7,9,7,6,2,0,3,0,3,0,3,0,2,6,2,6,2,6,2,6,7,8,7,9,7,8,7,9,7,8,7,9,7,8,7,9,7,8,7,9,7,6,2,0,1,5,
+WITNESS M n=10 graph_index=776 start=1 path=1,4,1,0,2,6,7,8,7,9,7,8,7,9,7,6,2,0,3,0,3,0,3,0,2,6,2,6,2,6,2,6,7,8,7,9,7,8,7,9,7,8,7,9,7,8,7,9,7,8,7,9,7,6,2,0,1,5,
+RESULT n=11 processed=5524 seen=5524 skipped=0 expected=5524 complete=1 T=74 M=22 treeT=63 cubicT=0 trees=66 cubics=0 states=87542553 seconds=11.274
+WITNESS T n=11 graph_index=496 start=0 path=0,2,6,2,7,2,6,2,7,2,0,1,4,8,10,4,1,5,1,5,1,5,1,0,3,0,3,0,3,0,3,0,3,0,3,0,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,0,1,4,10,8,9,
+WITNESS M n=11 graph_index=496 start=0 path=0,2,6,2,7,2,6,2,7,2,0,1,4,8,10,4,1,5,1,5,1,5,1,0,3,0,3,0,3,0,3,0,3,0,3,0,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,6,2,7,2,0,1,4,10,8,9,

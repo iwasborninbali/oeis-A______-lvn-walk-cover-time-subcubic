@@ -1,0 +1,12 @@
+n=1 graphs=1 trees=1 cubic=0 valid=yes
+n=2 graphs=1 trees=1 cubic=0 valid=yes
+n=3 graphs=2 trees=1 cubic=0 valid=yes
+n=4 graphs=6 trees=2 cubic=1 valid=yes
+n=5 graphs=10 trees=2 cubic=0 valid=yes
+n=6 graphs=29 trees=4 cubic=2 valid=yes
+n=7 graphs=64 trees=6 cubic=0 valid=yes
+n=8 graphs=194 trees=11 cubic=5 valid=yes
+n=9 graphs=531 trees=18 cubic=0 valid=yes
+n=10 graphs=1733 trees=37 cubic=19 valid=yes
+n=11 graphs=5524 trees=66 cubic=0 valid=yes
+n=12 graphs=19430 trees=135 cubic=85 valid=yes

@@ -1,0 +1,12 @@
+n=1 graphs=1
+n=2 graphs=1 expected=1 candidates=1 isomorphism_tests=0 match=1
+n=3 graphs=2 expected=2 candidates=3 isomorphism_tests=1 match=1
+n=4 graphs=6 expected=6 candidates=14 isomorphism_tests=8 match=1
+n=5 graphs=10 expected=10 candidates=45 isomorphism_tests=35 match=1
+n=6 graphs=29 expected=29 candidates=117 isomorphism_tests=88 match=1
+n=7 graphs=64 expected=64 candidates=384 isomorphism_tests=320 match=1
+n=8 graphs=194 expected=194 candidates=1158 isomorphism_tests=964 match=1
+n=9 graphs=531 expected=531 candidates=4069 isomorphism_tests=3538 match=1
+n=10 graphs=1733 expected=1733 candidates=13807 isomorphism_tests=12090 match=1
+n=11 graphs=5524 expected=5524 candidates=52325 isomorphism_tests=46837 match=1
+n=12 graphs=19430 expected=19430 candidates=196958 isomorphism_tests=177672 match=1

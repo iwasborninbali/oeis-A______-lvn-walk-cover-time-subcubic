@@ -1,0 +1,15 @@
+n= 1 graphs=    1 T= 0 M= 0 treeT= 0 cubicT= - states=         0
+n= 2 graphs=    1 T= 1 M= 1 treeT= 1 cubicT= - states=         2
+n= 3 graphs=    2 T= 3 M= 2 treeT= 3 cubicT= - states=        18
+n= 4 graphs=    6 T= 7 M= 3 treeT= 7 cubicT= 3 states=       167
+n= 5 graphs=   10 T=11 M= 5 treeT=11 cubicT= - states=       722
+n= 6 graphs=   29 T=17 M= 7 treeT=17 cubicT= 8 states=      5514
+n= 7 graphs=   64 T=27 M= 8 treeT=27 cubicT= - states=     27977
+n= 8 graphs=  194 T=34 M= 8 treeT=31 cubicT=15 states=    206959
+n= 9 graphs=  531 T=45 M=14 treeT=43 cubicT= - states=   1350244
+n=10 graphs= 1733 T=57 M=16 treeT=57 cubicT=26 states=  10992758
+n=11 graphs= 5524 T=74 M=22 treeT=63 cubicT= - states=  87542553
+n=12 graphs=19430 T=90 M=22 treeT=83 cubicT=42 states= 802689122
+n12 total worker seconds= 114.522
+n12 graphs= 19430 trees= 135 cubic= 85
+ALL FIVE ROWS MATCH; ALL GRAPHS ANALYZED; ZERO SKIPPED

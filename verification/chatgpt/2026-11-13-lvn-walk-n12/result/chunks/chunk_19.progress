@@ -1,0 +1,4 @@
+progress n=12 graph=100/19430 seen=19100 skipped=0 T=65 M=14 states=3865420 elapsed_s=0.544767
+progress n=12 graph=200/19430 seen=19200 skipped=0 T=65 M=14 states=7113737 elapsed_s=0.972677
+progress n=12 graph=300/19430 seen=19300 skipped=0 T=65 M=14 states=11446036 elapsed_s=1.56721
+progress n=12 graph=400/19430 seen=19400 skipped=0 T=65 M=14 states=14277102 elapsed_s=1.93111
