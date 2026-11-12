@@ -1,0 +1,24 @@
+n=1 exit=0 seconds=0.537
+{"n":1,"graphs":1,"states":0,"peak_graph_states":0,"worst_time":0,"worst_frequency":0,"seconds":0.000975333}
+n=2 exit=0 seconds=0.008
+{"n":2,"graphs":1,"states":2,"peak_graph_states":2,"worst_time":1,"worst_frequency":1,"seconds":0.000321333}
+n=3 exit=0 seconds=0.005
+{"n":3,"graphs":2,"states":18,"peak_graph_states":9,"worst_time":3,"worst_frequency":2,"seconds":0.000464791}
+n=4 exit=0 seconds=0.005
+{"n":4,"graphs":6,"states":167,"peak_graph_states":32,"worst_time":7,"worst_frequency":3,"seconds":0.000493667}
+n=5 exit=0 seconds=0.004
+{"n":5,"graphs":10,"states":722,"peak_graph_states":96,"worst_time":11,"worst_frequency":5,"seconds":0.000458792}
+n=6 exit=0 seconds=0.004
+{"n":6,"graphs":29,"states":5514,"peak_graph_states":336,"worst_time":17,"worst_frequency":7,"seconds":0.000978291}
+n=7 exit=0 seconds=0.007
+{"n":7,"graphs":64,"states":27977,"peak_graph_states":864,"worst_time":27,"worst_frequency":8,"seconds":0.00350254}
+n=8 exit=0 seconds=0.024
+{"n":8,"graphs":194,"states":206959,"peak_graph_states":2545,"worst_time":34,"worst_frequency":8,"seconds":0.0203525}
+n=9 exit=0 seconds=0.129
+{"n":9,"graphs":531,"states":1350244,"peak_graph_states":6565,"worst_time":45,"worst_frequency":14,"seconds":0.124982}
+n=10 exit=0 seconds=1.040
+{"n":10,"graphs":1733,"states":10992758,"peak_graph_states":23860,"worst_time":57,"worst_frequency":16,"seconds":1.03544}
+n=11 exit=0 seconds=8.022
+{"n":11,"graphs":5524,"states":87542553,"peak_graph_states":65421,"worst_time":74,"worst_frequency":22,"seconds":8.01535}
+n=12 exit=0 seconds=73.750
+{"n":12,"graphs":19430,"states":802689122,"peak_graph_states":224085,"worst_time":90,"worst_frequency":22,"seconds":73.7433}

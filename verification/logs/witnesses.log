@@ -1,0 +1,24 @@
+{"file": "../data/exact/witness_n1.json", "first_cover": 0, "max_frequency_before_cover": 0, "average_first_hit": "0", "final_counts": [1]}
+{"file": "../data/exact/frequency_n1.json", "first_cover": 0, "max_frequency_before_cover": 0, "average_first_hit": "0", "final_counts": [1]}
+{"file": "../data/exact/witness_n2.json", "first_cover": 1, "max_frequency_before_cover": 1, "average_first_hit": "1/2", "final_counts": [1, 1]}
+{"file": "../data/exact/frequency_n2.json", "first_cover": 1, "max_frequency_before_cover": 1, "average_first_hit": "1/2", "final_counts": [1, 1]}
+{"file": "../data/exact/witness_n3.json", "first_cover": 3, "max_frequency_before_cover": 2, "average_first_hit": "4/3", "final_counts": [1, 1, 2]}
+{"file": "../data/exact/frequency_n3.json", "first_cover": 3, "max_frequency_before_cover": 2, "average_first_hit": "4/3", "final_counts": [1, 1, 2]}
+{"file": "../data/exact/witness_n4.json", "first_cover": 7, "max_frequency_before_cover": 3, "average_first_hit": "5/2", "final_counts": [2, 1, 2, 3]}
+{"file": "../data/exact/frequency_n4.json", "first_cover": 5, "max_frequency_before_cover": 3, "average_first_hit": "9/4", "final_counts": [1, 1, 1, 3]}
+{"file": "../data/exact/witness_n5.json", "first_cover": 11, "max_frequency_before_cover": 5, "average_first_hit": "18/5", "final_counts": [2, 2, 1, 2, 5]}
+{"file": "../data/exact/frequency_n5.json", "first_cover": 11, "max_frequency_before_cover": 5, "average_first_hit": "18/5", "final_counts": [2, 2, 1, 2, 5]}
+{"file": "../data/exact/witness_n6.json", "first_cover": 17, "max_frequency_before_cover": 7, "average_first_hit": "31/6", "final_counts": [3, 3, 1, 1, 3, 7]}
+{"file": "../data/exact/frequency_n6.json", "first_cover": 17, "max_frequency_before_cover": 7, "average_first_hit": "31/6", "final_counts": [3, 3, 1, 1, 3, 7]}
+{"file": "../data/exact/witness_n7.json", "first_cover": 27, "max_frequency_before_cover": 8, "average_first_hit": "48/7", "final_counts": [1, 1, 3, 6, 8, 6, 3]}
+{"file": "../data/exact/frequency_n7.json", "first_cover": 27, "max_frequency_before_cover": 8, "average_first_hit": "48/7", "final_counts": [1, 1, 3, 6, 8, 6, 3]}
+{"file": "../data/exact/witness_n8.json", "first_cover": 34, "max_frequency_before_cover": 7, "average_first_hit": "63/8", "final_counts": [1, 1, 3, 7, 7, 7, 6, 3]}
+{"file": "../data/exact/frequency_n8.json", "first_cover": 31, "max_frequency_before_cover": 8, "average_first_hit": "15/2", "final_counts": [1, 1, 3, 5, 5, 8, 6, 3]}
+{"file": "../data/exact/witness_n9.json", "first_cover": 45, "max_frequency_before_cover": 11, "average_first_hit": "28/3", "final_counts": [1, 1, 7, 3, 7, 7, 6, 11, 3]}
+{"file": "../data/exact/frequency_n9.json", "first_cover": 42, "max_frequency_before_cover": 14, "average_first_hit": "86/9", "final_counts": [6, 6, 1, 3, 2, 3, 6, 2, 14]}
+{"file": "../data/exact/witness_n10.json", "first_cover": 57, "max_frequency_before_cover": 16, "average_first_hit": "53/5", "final_counts": [7, 7, 1, 1, 3, 7, 7, 6, 3, 16]}
+{"file": "../data/exact/frequency_n10.json", "first_cover": 57, "max_frequency_before_cover": 16, "average_first_hit": "53/5", "final_counts": [7, 7, 1, 1, 3, 7, 7, 6, 3, 16]}
+{"file": "../data/exact/witness_n11.json", "first_cover": 74, "max_frequency_before_cover": 22, "average_first_hit": "172/11", "final_counts": [10, 10, 1, 3, 6, 2, 3, 10, 6, 2, 22]}
+{"file": "../data/exact/frequency_n11.json", "first_cover": 74, "max_frequency_before_cover": 22, "average_first_hit": "172/11", "final_counts": [10, 10, 1, 3, 6, 2, 3, 10, 6, 2, 22]}
+{"file": "../data/exact/witness_n12.json", "first_cover": 90, "max_frequency_before_cover": 18, "average_first_hit": "43/3", "final_counts": [1, 10, 3, 6, 15, 2, 18, 3, 10, 6, 15, 2]}
+{"file": "../data/exact/frequency_n12.json", "first_cover": 83, "max_frequency_before_cover": 22, "average_first_hit": "79/6", "final_counts": [10, 10, 1, 1, 3, 6, 6, 6, 10, 6, 3, 22]}

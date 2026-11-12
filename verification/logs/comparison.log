@@ -1,0 +1,12 @@
+n=1: 1 graphs; all per-graph producer results and all table columns match
+n=2: 1 graphs; all per-graph producer results and all table columns match
+n=3: 2 graphs; all per-graph producer results and all table columns match
+n=4: 6 graphs; all per-graph producer results and all table columns match
+n=5: 10 graphs; all per-graph producer results and all table columns match
+n=6: 29 graphs; all per-graph producer results and all table columns match
+n=7: 64 graphs; all per-graph producer results and all table columns match
+n=8: 194 graphs; all per-graph producer results and all table columns match
+n=9: 531 graphs; all per-graph producer results and all table columns match
+n=10: 1733 graphs; all per-graph producer results and all table columns match
+n=11: 5524 graphs; all per-graph producer results and all table columns match
+n=12: 19430 graphs; all per-graph producer results and all table columns match

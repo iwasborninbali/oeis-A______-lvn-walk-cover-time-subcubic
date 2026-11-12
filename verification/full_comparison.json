@@ -1,0 +1,86 @@
+[
+  {
+    "n": 1,
+    "classes_matched": 1,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.102397,
+    "elapsed_seconds": 0.052543000027071685
+  },
+  {
+    "n": 2,
+    "classes_matched": 1,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.10332799999999999,
+    "elapsed_seconds": 0.053670499997679144
+  },
+  {
+    "n": 3,
+    "classes_matched": 2,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.104199,
+    "elapsed_seconds": 0.05468683299841359
+  },
+  {
+    "n": 4,
+    "classes_matched": 6,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.105262,
+    "elapsed_seconds": 0.05585975002031773
+  },
+  {
+    "n": 5,
+    "classes_matched": 10,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.106638,
+    "elapsed_seconds": 0.057350166025571525
+  },
+  {
+    "n": 6,
+    "classes_matched": 29,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.110634,
+    "elapsed_seconds": 0.061425583029631525
+  },
+  {
+    "n": 7,
+    "classes_matched": 64,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.12012999999999999,
+    "elapsed_seconds": 0.0710338749922812
+  },
+  {
+    "n": 8,
+    "classes_matched": 194,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.179991,
+    "elapsed_seconds": 0.13109291600994766
+  },
+  {
+    "n": 9,
+    "classes_matched": 531,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 0.295341,
+    "elapsed_seconds": 0.24865070800296962
+  },
+  {
+    "n": 10,
+    "classes_matched": 1733,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 1.891268,
+    "elapsed_seconds": 1.8453537080204114
+  },
+  {
+    "n": 11,
+    "classes_matched": 5524,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 3.58796,
+    "elapsed_seconds": 3.567501333018299
+  },
+  {
+    "n": 12,
+    "classes_matched": 19430,
+    "all_per_graph_extrema_equal": true,
+    "cpu_seconds": 63.366834999999995,
+    "elapsed_seconds": 63.35138329101028
+  }
+]

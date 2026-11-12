@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+verification/independent_graph_results.jsonl
+verification/independent_results.json

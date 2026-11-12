@@ -1,0 +1,10 @@
+{"word":"0001001101","times":[8,8,5,11,11],"frequencies":[3,3,2,5,4],"states":94}
+{"word":"0001010110","times":[4,4,8,9,9],"frequencies":[1,1,3,3,3],"states":57}
+{"word":"0001010111","times":[9,9,9,10,10],"frequencies":[3,3,3,4,4],"states":96}
+{"word":"0001011110","times":[4,8,8,7,7],"frequencies":[1,2,2,2,2],"states":61}
+{"word":"0001110111","times":[4,9,9,9,9],"frequencies":[1,3,3,3,3],"states":87}
+{"word":"0010101011","times":[4,8,8,11,8],"frequencies":[1,3,3,3,3],"states":94}
+{"word":"0011011110","times":[4,4,4,5,5],"frequencies":[1,1,1,2,2],"states":53}
+{"word":"0011101100","times":[4,4,4,4,4],"frequencies":[1,1,1,1,1],"states":35}
+{"word":"0011101101","times":[4,7,7,7,7],"frequencies":[1,2,2,2,2],"states":72}
+{"word":"0011111110","times":[4,4,4,7,7],"frequencies":[1,1,1,2,2],"states":73}

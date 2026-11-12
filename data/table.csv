@@ -1,0 +1,13 @@
+n,connected_simple_subcubic_graphs,worst_first_cover_moves,worst_frequency_before_cover,tree_worst_first_cover,cubic_graphs,cubic_worst_first_cover
+1,1,0,0,0,,
+2,1,1,1,1,,
+3,2,3,2,3,,
+4,6,7,3,7,1,3
+5,10,11,5,11,,
+6,29,17,7,17,2,8
+7,64,27,8,27,,
+8,194,34,8,31,5,15
+9,531,45,14,43,,
+10,1733,57,16,57,19,26
+11,5524,74,22,63,,
+12,19430,90,22,83,85,42

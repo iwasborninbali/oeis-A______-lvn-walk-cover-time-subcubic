@@ -1,0 +1,6 @@
+{"word":"001011","times":[4,4,4,5],"frequencies":[2,2,2,3],"states":31}
+{"word":"001101","times":[3,3,7,7],"frequencies":[1,1,3,3],"states":28}
+{"word":"001111","times":[3,6,6,6],"frequencies":[1,2,2,2],"states":32}
+{"word":"011110","times":[3,3,3,3],"frequencies":[1,1,1,1],"states":20}
+{"word":"011111","times":[3,3,4,4],"frequencies":[1,1,2,2],"states":28}
+{"word":"111111","times":[3,3,3,3],"frequencies":[1,1,1,1],"states":28}
