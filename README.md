@@ -1,7 +1,11 @@
 # OEIS candidate (no A-number yet): Maximum least-visited-neighbor cover time on subcubic graphs
 
 <!-- oeis-status:begin -->
-**OEIS status: not submitted.** (replaced by the registry tool)
+**OEIS status: not submitted; no A-number yet** (lab registry, 13 Nov 2026).
+
+- A______, least-visited-neighbour walk, worst first-cover time on connected subcubic graphs: **candidate** (2026-11-13: repository built (core c2)). Certificate: complete.
+
+Rules and the full registry: [athanor-oeis](https://github.com/iwasborninbali/athanor-oeis/blob/main/REGISTRY.md).
 <!-- oeis-status:end -->
 
 ## Definition
