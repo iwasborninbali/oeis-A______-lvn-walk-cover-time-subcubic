@@ -1,7 +1,7 @@
 # OEIS candidate (no A-number yet): Maximum least-visited-neighbor cover time on subcubic graphs
 
 <!-- oeis-status:begin -->
-**OEIS status: not submitted; no A-number yet** (lab registry, 13 Nov 2026).
+**OEIS status: not submitted; no A-number yet** (lab registry, 14 Nov 2026).
 
 - A______, least-visited-neighbour walk, worst first-cover time on connected subcubic graphs: **verified** (2026-11-13: verified: independent ChatGPT recount to n = 12, rerun by the guide). Certificate: complete.
 
